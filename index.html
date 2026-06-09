@@ -147,6 +147,16 @@ button{font-family:inherit;cursor:pointer}
 .lrow{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--bord)}
 .footer{text-align:center;padding:20px;font-size:11px;color:var(--tt);border-top:1px solid var(--bord);background:var(--bs)}
 .footer a{color:var(--green);text-decoration:none}
+.sub-card{background:var(--nav);border-radius:var(--radl);padding:16px;margin-bottom:1rem}
+.sub-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:12px}
+.sub-lbl{font-size:10px;font-weight:600;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.sub-head{font-size:15px;font-weight:500;color:var(--gp);margin-bottom:5px}
+.sub-desc{font-size:11px;color:rgba(200,230,160,0.55);line-height:1.55;max-width:320px}
+.sub-pr{font-family:var(--display);font-size:26px;font-weight:700;color:#fff;text-align:right;white-space:nowrap;line-height:1}
+.sub-yr{font-size:11px;color:rgba(200,230,160,0.5);font-family:var(--font);font-weight:400;display:block;margin-top:4px;text-align:right}
+.sub-pts{font-size:11px;color:var(--gold);text-align:right;margin-top:5px;font-weight:500}
+.sub-btn{display:block;width:100%;background:var(--gold);color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:11px;border-radius:var(--rad);text-align:center;letter-spacing:.3px;border:none;cursor:pointer;font-family:inherit;transition:background .15s}
+.sub-btn:hover{background:#9a6b08}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .wrap{animation:fadeUp .35s ease forwards}
 @media(max-width:500px){
@@ -163,7 +173,7 @@ button{font-family:inherit;cursor:pointer}
 <nav class="topnav">
   <div>
     <div class="nav-brand">Index <span>Athlete</span></div>
-    <div class="nav-sub">by Chendeleza Africa · East Africa</div>
+    <div class="nav-sub">by Chendeleza Africa · East African Football Player Development</div>
   </div>
   <span class="beta">Beta</span>
 </nav>
@@ -183,6 +193,22 @@ button{font-family:inherit;cursor:pointer}
   </div>
   <div class="akai-r"><div class="akai-kv">KES 25/wk</div><div class="akai-kg">21 pts/week</div></div>
 </div>
+
+<div class="sub-card">
+  <div class="sub-inner">
+    <div>
+      <div class="sub-lbl">Subscription</div>
+      <div class="sub-head">AKAI Weekly</div>
+      <div class="sub-desc">1,008 points per year · accumulated daily · allocated to helping the best players on their journey to success</div>
+    </div>
+    <div style="flex-shrink:0">
+      <div class="sub-pr">KES 1,200<span class="sub-yr">per year</span></div>
+      <div class="sub-pts">1,008 pts / year</div>
+    </div>
+  </div>
+  <a href="#" class="sub-btn">Subscribe to AKAI Weekly</a>
+</div>
+
 
 <div class="tabs" id="tabs-bar">
   <button class="tab active" id="tab-disc" onclick="switchTab('disc')">Discover</button>
