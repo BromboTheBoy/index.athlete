@@ -20,7 +20,7 @@
   --bord: rgba(0,0,0,0.09); --bord2: rgba(0,0,0,0.16);
   --rad: 8px; --radl: 12px;
   --green: #037E37; --gm: #05A347; --gl: #E8F5ED; --gt: #024A22; --gp: #B8E8C9;
-  --gold: #FC1818; --nav: #024A22;
+  --gold: #FC1818; --nav: #024A22; --au: #D4A017; --blk: #1A1A18;
   --font: 'DM Sans', system-ui, sans-serif;
   --display: 'Syne', system-ui, sans-serif;
 }
@@ -39,12 +39,10 @@ button{font-family:inherit;cursor:pointer}
 .mc{background:var(--bs);border-radius:var(--rad);padding:12px 14px}
 .ml{font-size:12px;color:var(--ts);margin-bottom:2px}
 .mv{font-family:var(--display);font-size:22px;font-weight:700;color:var(--tp);line-height:1}
-.akai{border-left:3px solid var(--gold);background:rgba(252,24,24,0.05);border-radius:0 var(--rad) var(--rad) 0;padding:12px 14px;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;gap:10px}
-.akai-t{font-size:14px;font-weight:500;color:var(--gold);letter-spacing:.4px}
-.akai-s{font-size:11px;color:var(--ts);margin-top:3px}
-.akai-r{text-align:right;flex-shrink:0}
-.akai-kv{font-family:var(--display);font-size:16px;font-weight:700;color:var(--tp)}
-.akai-kg{font-size:11px;color:var(--ts)}
+.akai{border-left:3px solid var(--au);background:var(--gl);border-radius:0 var(--rad) var(--rad) 0;padding:12px 14px;margin-bottom:1rem}
+.akai-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blk);margin-bottom:4px}
+.akai-t{font-size:14px;font-weight:700;color:var(--green);letter-spacing:.4px}
+.akai-s{font-size:11px;color:var(--ts);margin-top:2px}
 .tabs{display:flex;border-bottom:1px solid var(--bord);margin-bottom:0}
 .tab{padding:10px 16px;font-size:13px;font-weight:500;color:var(--ts);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .15s}
 .tab.active{color:var(--green);border-bottom-color:var(--gm)}
@@ -83,7 +81,7 @@ button{font-family:inherit;cursor:pointer}
 .pr{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--rad);border:1px solid var(--bord);background:var(--bp);margin-bottom:6px;cursor:pointer;transition:all .15s}
 .pr:hover{border-color:var(--bord2);background:var(--bs)}
 .rn{font-family:var(--display);font-size:13px;font-weight:700;color:var(--tt);min-width:18px;text-align:center}
-.rn.g{color:var(--gold)}
+.rn.g{color:var(--au)}
 .avt{width:38px;height:38px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--gt);flex-shrink:0}
 .pi{flex:1;min-width:0}
 .pn2{font-size:14px;font-weight:500;color:var(--tp);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
@@ -187,28 +185,10 @@ button{font-family:inherit;cursor:pointer}
 </div>
 
 <div class="akai">
-  <div>
-    <div class="akai-t">AKAI WEEKLY</div>
-    <div class="akai-s">Football, Culture & Community Magazine</div>
-  </div>
-  <div class="akai-r"><div class="akai-kv">KES 25/wk</div><div class="akai-kg">21 pts/week</div></div>
+  <div class="akai-label">In Partnership With</div>
+  <div class="akai-t">AKAI WEEKLY</div>
+  <div class="akai-s">Football, Culture & Community Magazine</div>
 </div>
-
-<div class="sub-card">
-  <div class="sub-inner">
-    <div>
-      <div class="sub-lbl">Subscription</div>
-      <div class="sub-head">AKAI WEEKLY</div>
-      <div class="sub-desc">1,008 points per year · accumulated daily · allocated to helping the best players on their journey to success</div>
-    </div>
-    <div style="flex-shrink:0">
-      <div class="sub-pr">KES 1,200<span class="sub-yr">per year</span></div>
-      <div class="sub-pts">1,008 pts / year</div>
-    </div>
-  </div>
-  <a href="#" class="sub-btn">Subscribe to AKAI WEEKLY</a>
-</div>
-
 
 <div class="tabs" id="tabs-bar">
   <button class="tab active" id="tab-disc" onclick="switchTab('disc')">Discover</button>
@@ -220,7 +200,7 @@ button{font-family:inherit;cursor:pointer}
   <div class="sb">
     <div>
       <div class="sb-info"><i class="ti ti-star" style="font-size:14px;vertical-align:-2px;color:#FC1818" aria-hidden="true"></i> Day <span id="fan-streak-num">7</span> Fan Streak</div>
-      <div class="sb-day">AKAI Weekly · 3 points available today</div>
+      <div class="sb-day">AKAI WEEKLY · 3 points available today</div>
     </div>
     <div class="dots-row" id="dots-disc"></div>
   </div>
@@ -230,6 +210,23 @@ button{font-family:inherit;cursor:pointer}
 <div id="view-rank" style="display:none">
   <div class="slbl">Today's rankings</div>
   <div id="rank-list"></div>
+</div>
+
+<div id="home-sub">
+  <div class="sub-card" style="margin-top:1rem">
+    <div class="sub-inner">
+      <div>
+        <div class="sub-lbl">Subscription</div>
+        <div class="sub-head">AKAI WEEKLY</div>
+        <div class="sub-desc">Points allocated to helping the best players on their journey to success.</div>
+      </div>
+      <div style="flex-shrink:0">
+        <div class="sub-pr">KES 1,200<span class="sub-yr">per year</span></div>
+        <div class="sub-pts">You get 3 points per day</div>
+      </div>
+    </div>
+    <a href="#" class="sub-btn">Subscribe to AKAI WEEKLY</a>
+  </div>
 </div>
 
 <div id="view-prof" style="display:none">
@@ -275,7 +272,21 @@ button{font-family:inherit;cursor:pointer}
       </div>
       <button class="vb" id="vbtn" onclick="castVote()"><i class="ti ti-heart" style="font-size:14px" aria-hidden="true"></i>Support</button>
     </div>
-    <div style="font-size:11px;color:var(--tt);margin-top:8px">3 pts/day from your AKAI Weekly subscription · 80%+ funds player development directly</div>
+    <div style="font-size:11px;color:var(--tt);margin-top:8px">3 points per day from your AKAI WEEKLY subscription · 80%+ funds player development directly</div>
+  </div>
+  <div class="sub-card" style="margin-top:1rem">
+    <div class="sub-inner">
+      <div>
+        <div class="sub-lbl">Subscription</div>
+        <div class="sub-head">AKAI WEEKLY</div>
+        <div class="sub-desc">Points allocated to helping the best players on their journey to success.</div>
+      </div>
+      <div style="flex-shrink:0">
+        <div class="sub-pr">KES 1,200<span class="sub-yr">per year</span></div>
+        <div class="sub-pts">You get 3 points per day</div>
+      </div>
+    </div>
+    <a href="#" class="sub-btn">Subscribe to AKAI WEEKLY</a>
   </div>
 </div>
 
@@ -508,7 +519,7 @@ function switchTab(t){
 function oProf(id){
   cur=P.find(function(p){return p.id===id;});
   var v=sc(cur);
-  ['tabs-bar','pos-wrap'].forEach(function(i){document.getElementById(i).style.display='none';});
+  ['tabs-bar','pos-wrap','home-sub'].forEach(function(i){document.getElementById(i).style.display='none';});
   ['view-disc','view-rank','view-log','view-club'].forEach(function(i){document.getElementById(i).style.display='none';});
   document.getElementById('view-prof').style.display='block';
   document.getElementById('back-lbl').textContent=lastTab==='disc'?'Discover':'Rankings';
@@ -593,6 +604,7 @@ function showMain(){
   ['view-prof','view-log','view-club'].forEach(function(i){document.getElementById(i).style.display='none';});
   document.getElementById('tabs-bar').style.display='';
   document.getElementById('pos-wrap').style.display='';
+  document.getElementById('home-sub').style.display='';
   if(rC){rC.destroy();rC=null;}
   switchTab(lastTab);
   window.scrollTo(0,0);
