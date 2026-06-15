@@ -178,16 +178,24 @@ button{font-family:inherit;cursor:pointer}
 
 <div class="wrap">
 
-<div class="mg3">
+<div class="mg3" id="stats-bar">
   <div class="mc"><div class="ml">Verified players</div><div class="mv">58</div></div>
   <div class="mc"><div class="ml">Opportunities unlocked</div><div class="mv">290</div></div>
   <div class="mc"><div class="ml">Community pts today</div><div class="mv" id="vt">348</div></div>
 </div>
 
-<div class="akai">
+<div class="akai" id="akai-banner">
   <div class="akai-label">In Partnership With</div>
   <div class="akai-t">AKAI WEEKLY</div>
   <div class="akai-s">Football, Culture & Community Magazine</div>
+</div>
+
+<div class="sb" id="supporter-sb">
+  <div>
+    <div class="sb-info"><i class="ti ti-star" style="font-size:14px;vertical-align:-2px;color:#FC1818" aria-hidden="true"></i> Your Index Athlete Supporter Streak: <span id="fan-streak-num">17</span> Days</div>
+    <div class="sb-day">3 points available today</div>
+  </div>
+  <div class="dots-row" id="dots-disc"></div>
 </div>
 
 <div class="tabs" id="tabs-bar">
@@ -197,13 +205,6 @@ button{font-family:inherit;cursor:pointer}
 <div id="pos-wrap"><div class="pos-bar" id="pos-bar"></div></div>
 
 <div id="view-disc">
-  <div class="sb">
-    <div>
-      <div class="sb-info"><i class="ti ti-star" style="font-size:14px;vertical-align:-2px;color:#FC1818" aria-hidden="true"></i> Day <span id="fan-streak-num">7</span> Fan Streak</div>
-      <div class="sb-day">AKAI WEEKLY · 3 points available today</div>
-    </div>
-    <div class="dots-row" id="dots-disc"></div>
-  </div>
   <div class="dgrid" id="disc-grid"></div>
 </div>
 
@@ -272,7 +273,6 @@ button{font-family:inherit;cursor:pointer}
       </div>
       <button class="vb" id="vbtn" onclick="castVote()"><i class="ti ti-heart" style="font-size:14px" aria-hidden="true"></i>Support</button>
     </div>
-    <div style="font-size:11px;color:var(--tt);margin-top:8px">3 points per day from your AKAI WEEKLY subscription · 80%+ funds player development directly</div>
   </div>
   <div class="sub-card" style="margin-top:1rem">
     <div class="sub-inner">
@@ -519,7 +519,7 @@ function switchTab(t){
 function oProf(id){
   cur=P.find(function(p){return p.id===id;});
   var v=sc(cur);
-  ['tabs-bar','pos-wrap','home-sub'].forEach(function(i){document.getElementById(i).style.display='none';});
+  ['tabs-bar','pos-wrap','home-sub','akai-banner','stats-bar','supporter-sb'].forEach(function(i){document.getElementById(i).style.display='none';});
   ['view-disc','view-rank','view-log','view-club'].forEach(function(i){document.getElementById(i).style.display='none';});
   document.getElementById('view-prof').style.display='block';
   document.getElementById('back-lbl').textContent=lastTab==='disc'?'Discover':'Rankings';
@@ -552,7 +552,7 @@ function rNeed(p){
     +'<div class="ni">'+p.need.item+'</div>'
     +'<div class="ntr"><div class="nf" id="nf" style="width:'+p.need.pct.toFixed(0)+'%"></div></div>'
     +'<div class="nm2"><span id="np">'+p.need.pct.toFixed(0)+'% funded by the community</span>'
-    +'<span>KES '+p.need.cost.toLocaleString()+'</span></div></div>';
+    +'<span>'+p.need.cost.toLocaleString()+' points</span></div></div>';
 }
 
 function rPA(p){
@@ -605,6 +605,9 @@ function showMain(){
   document.getElementById('tabs-bar').style.display='';
   document.getElementById('pos-wrap').style.display='';
   document.getElementById('home-sub').style.display='';
+  document.getElementById('akai-banner').style.display='';
+  document.getElementById('stats-bar').style.display='';
+  document.getElementById('supporter-sb').style.display='';
   if(rC){rC.destroy();rC=null;}
   switchTab(lastTab);
   window.scrollTo(0,0);
@@ -652,7 +655,7 @@ function oClub(){
     '<div class="nw"><div class="nl">Club contribution toward player\'s need</div>'
     +'<div class="ni">'+p.need.item+'</div>'
     +'<div class="ntr"><div class="nf" style="width:'+p.need.pct.toFixed(0)+'%"></div></div>'
-    +'<div class="nm2"><span>'+p.need.pct.toFixed(0)+'% funded by supporters</span><span>KES '+p.need.cost.toLocaleString()+'</span></div></div>';
+    +'<div class="nm2"><span>'+p.need.pct.toFixed(0)+'% funded by supporters</span><span>'+p.need.cost.toLocaleString()+' points</span></div></div>';
   window.scrollTo(0,0);
 }
 
