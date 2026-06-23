@@ -39,6 +39,13 @@ button{font-family:inherit;cursor:pointer}
 .mc{background:var(--bs);border-radius:var(--rad);padding:12px 14px}
 .ml{font-size:12px;color:var(--ts);margin-bottom:2px}
 .mv{font-family:var(--display);font-size:22px;font-weight:700;color:var(--tp);line-height:1}
+.about-ia{font-size:11.5px;color:var(--ts);line-height:1.7;padding:12px 0 8px;border-top:1px solid var(--bord)}
+.ca-tl{position:relative;padding-left:20px}
+.ca-tl::before{content:'';position:absolute;left:3px;top:6px;bottom:6px;width:1.5px;background:linear-gradient(to bottom,var(--green),var(--gp))}
+.ca-item{display:flex;align-items:flex-start;gap:10px;padding:5px 0;position:relative}
+.ca-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:4px;margin-left:-24px;border:1.5px solid var(--bs)}
+.ca-date{font-size:10px;color:var(--ts);width:68px;flex-shrink:0;font-weight:500;padding-top:1px}
+.ca-name{font-size:12px;color:var(--tp);line-height:1.4}
 .akai{border-left:3px solid var(--au);background:var(--gl);border-radius:0 var(--rad) var(--rad) 0;padding:12px 14px;margin-bottom:1rem}
 .akai-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blk);margin-bottom:4px}
 .akai-t{font-size:14px;font-weight:700;color:var(--green);letter-spacing:.4px}
@@ -178,6 +185,10 @@ button{font-family:inherit;cursor:pointer}
 
 <div class="wrap">
 
+<div class="about-ia" id="about-ia">
+  <strong style="color:var(--tp)">INDEX ATHLETE</strong> is a productivity and accountability tool created for 18 to 21 year old football players in Ungazi. It acts as a player's CV which helps them get discovered. Through our partnership with <strong style="color:var(--tp)">AKAI WEEKLY</strong>, the player's verifiable educational achievements are also featured. Through our partnership with <strong style="color:var(--tp)">BALL HAUS</strong>, the player's hobbies and interests can be featured as well. Through <strong style="color:var(--tp)">INDEX ATHLETE</strong>, players work toward their goals and they unlock opportunities and rewards while receiving support from our football community.
+</div>
+
 <div class="mg3" id="stats-bar">
   <div class="mc"><div class="ml">Verified players</div><div class="mv">58</div></div>
   <div class="mc"><div class="ml">Opportunities unlocked</div><div class="mv">290</div></div>
@@ -211,6 +222,82 @@ button{font-family:inherit;cursor:pointer}
 <div id="view-rank" style="display:none">
   <div class="slbl">Today's rankings</div>
   <div id="rank-list"></div>
+</div>
+
+<div id="about-chendeleza">
+  <div style="margin:1.4rem 0 0">
+    <div class="slbl" style="margin-bottom:10px">About Chendeleza Africa</div>
+    <p style="font-size:11.5px;color:var(--ts);line-height:1.65;margin-bottom:14px">Founded in 2022 in Bugesera, Rwanda, Chendeleza Africa builds player development infrastructure for the next generation of African footballers — combining sport, education, and community engagement.</p>
+    <div class="ca-tl">
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#FC1818"></div>
+        <div class="ca-date">2026</div>
+        <div class="ca-name">INDEX ATHLETE — Platform Launch</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#FC1818"></div>
+        <div class="ca-date">Aug 2025</div>
+        <div class="ca-name">Alkebulan Luxury Football Research</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#D4A017"></div>
+        <div class="ca-date">Mar 2025</div>
+        <div class="ca-name">Ball Haus Cards — with Palilia Lab</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#024A22"></div>
+        <div class="ca-date">Sep 2024</div>
+        <div class="ca-name">AKAI WEEKLY Contributor Debut</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#FC1818"></div>
+        <div class="ca-date">May 2024</div>
+        <div class="ca-name">Chendeleza Africa Player Profiles — Launch</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#D4A017"></div>
+        <div class="ca-date">May 2023</div>
+        <div class="ca-name">Partnership with Palilia Lab</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#05A347"></div>
+        <div class="ca-date">16 Apr 2023</div>
+        <div class="ca-name">La Liga Eldoret Cup — 1st Edition</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#05A347"></div>
+        <div class="ca-date">13 Jan 2023</div>
+        <div class="ca-name">CHEZAPRO Pilot — Eldoret</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#024A22"></div>
+        <div class="ca-date">Nov 2022</div>
+        <div class="ca-name">Incorporated in Kenya</div>
+      </div>
+
+      <div class="ca-item">
+        <div class="ca-dot" style="background:#024A22"></div>
+        <div class="ca-date">Sep 2022</div>
+        <div class="ca-name">Walden Park — Version One Design</div>
+      </div>
+
+      <div class="ca-item ca-founding">
+        <div class="ca-dot" style="background:#024A22;width:10px;height:10px;margin-top:3px;box-shadow:0 0 0 3px rgba(2,74,34,0.18)"></div>
+        <div class="ca-date" style="color:var(--gt);font-weight:600">Jul 2022</div>
+        <div class="ca-name" style="color:var(--gt);font-weight:600">Founded — Bugesera, Rwanda</div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <div id="home-sub">
@@ -519,7 +606,7 @@ function switchTab(t){
 function oProf(id){
   cur=P.find(function(p){return p.id===id;});
   var v=sc(cur);
-  ['tabs-bar','pos-wrap','home-sub','akai-banner','stats-bar','supporter-sb'].forEach(function(i){document.getElementById(i).style.display='none';});
+  ['tabs-bar','pos-wrap','home-sub','akai-banner','stats-bar','supporter-sb','about-ia','about-chendeleza'].forEach(function(i){document.getElementById(i).style.display='none';});
   ['view-disc','view-rank','view-log','view-club'].forEach(function(i){document.getElementById(i).style.display='none';});
   document.getElementById('view-prof').style.display='block';
   document.getElementById('back-lbl').textContent=lastTab==='disc'?'Discover':'Rankings';
@@ -608,6 +695,8 @@ function showMain(){
   document.getElementById('akai-banner').style.display='';
   document.getElementById('stats-bar').style.display='';
   document.getElementById('supporter-sb').style.display='';
+  document.getElementById('about-ia').style.display='';
+  document.getElementById('about-chendeleza').style.display='';
   if(rC){rC.destroy();rC=null;}
   switchTab(lastTab);
   window.scrollTo(0,0);
